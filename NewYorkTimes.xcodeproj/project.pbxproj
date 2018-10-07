@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		AA373740216AA71800F3EB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37373F216AA71800F3EB1E /* AppDelegate.swift */; };
-		AA373742216AA71800F3EB1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA373741216AA71800F3EB1E /* ViewController.swift */; };
+		AA373742216AA71800F3EB1E /* TopStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA373741216AA71800F3EB1E /* TopStoriesViewController.swift */; };
 		AA373745216AA71800F3EB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA373743216AA71800F3EB1E /* Main.storyboard */; };
 		AA373747216AA72100F3EB1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA373746216AA72100F3EB1E /* Assets.xcassets */; };
 		AA37374A216AA72100F3EB1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA373748216AA72100F3EB1E /* LaunchScreen.storyboard */; };
 		AA373755216AA72100F3EB1E /* NewYorkTimesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA373754216AA72100F3EB1E /* NewYorkTimesTests.swift */; };
+		AA373764216AAFC700F3EB1E /* StoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA373763216AAFC700F3EB1E /* StoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 /* Begin PBXFileReference section */
 		AA37373C216AA71800F3EB1E /* NewYorkTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewYorkTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA37373F216AA71800F3EB1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA373741216AA71800F3EB1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA373741216AA71800F3EB1E /* TopStoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesViewController.swift; sourceTree = "<group>"; };
 		AA373744216AA71800F3EB1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA373746216AA72100F3EB1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA373749216AA72100F3EB1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		AA373750216AA72100F3EB1E /* NewYorkTimesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewYorkTimesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA373754216AA72100F3EB1E /* NewYorkTimesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewYorkTimesTests.swift; sourceTree = "<group>"; };
 		AA373756216AA72200F3EB1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA373763216AAFC700F3EB1E /* StoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,13 @@
 			isa = PBXGroup;
 			children = (
 				AA37373F216AA71800F3EB1E /* AppDelegate.swift */,
-				AA373741216AA71800F3EB1E /* ViewController.swift */,
 				AA373743216AA71800F3EB1E /* Main.storyboard */,
 				AA373746216AA72100F3EB1E /* Assets.xcassets */,
 				AA373748216AA72100F3EB1E /* LaunchScreen.storyboard */,
 				AA37374B216AA72100F3EB1E /* Info.plist */,
+				AA37375F216AA80600F3EB1E /* Model */,
+				AA373760216AA83000F3EB1E /* View */,
+				AA373761216AA83800F3EB1E /* ViewModel */,
 			);
 			path = NewYorkTimes;
 			sourceTree = "<group>";
@@ -94,6 +98,37 @@
 				AA373756216AA72200F3EB1E /* Info.plist */,
 			);
 			path = NewYorkTimesTests;
+			sourceTree = "<group>";
+		};
+		AA37375F216AA80600F3EB1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA373760216AA83000F3EB1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA373762216AAF9000F3EB1E /* ViewCell */,
+				AA373741216AA71800F3EB1E /* TopStoriesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA373761216AA83800F3EB1E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AA373762216AAF9000F3EB1E /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AA373763216AAFC700F3EB1E /* StoryCell.swift */,
+			);
+			path = ViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA373742216AA71800F3EB1E /* ViewController.swift in Sources */,
+				AA373742216AA71800F3EB1E /* TopStoriesViewController.swift in Sources */,
 				AA373740216AA71800F3EB1E /* AppDelegate.swift in Sources */,
+				AA373764216AAFC700F3EB1E /* StoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TopStoriesViewController.swift
 //  NewYorkTimes
 //
 //  Created by Christian  Huang on 08/10/18.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+//New York Times API Key: 2e349727818b436f9806e608ceeec68a
+class TopStoriesViewController: UIViewController {
+    @IBOutlet weak var topStoriesTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,3 +20,6 @@ class ViewController: UIViewController {
 
 }
 
+extension TopStoriesViewController: UITableViewDelegate {
+    
+}
