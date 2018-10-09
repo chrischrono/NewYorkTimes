@@ -9,9 +9,8 @@
 import UIKit
 
 class StoryCell: UITableViewCell {
-    @IBOutlet weak var thumbImageView: UIImageView!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var abstractLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     
     override func awakeFromNib() {
