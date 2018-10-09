@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2AD933A5340EAE3C422FF8DB /* Pods_NewYorkTimes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB69F214DD4ECCF88C86E7DF /* Pods_NewYorkTimes.framework */; };
+		AA360A41216D452E008B6721 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A40216D452E008B6721 /* Story.swift */; };
 		AA373740216AA71800F3EB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37373F216AA71800F3EB1E /* AppDelegate.swift */; };
 		AA373742216AA71800F3EB1E /* TopStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA373741216AA71800F3EB1E /* TopStoriesViewController.swift */; };
 		AA373745216AA71800F3EB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA373743216AA71800F3EB1E /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		115E2B218241B532B263BC2C /* Pods-NewYorkTimes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewYorkTimes.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewYorkTimes/Pods-NewYorkTimes.release.xcconfig"; sourceTree = "<group>"; };
 		4AE4B1F4DB64F16637BEEEFC /* Pods-NewYorkTimesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewYorkTimesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewYorkTimesTests/Pods-NewYorkTimesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9501026727F8368F84479709 /* Pods-NewYorkTimesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewYorkTimesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewYorkTimesTests/Pods-NewYorkTimesTests.release.xcconfig"; sourceTree = "<group>"; };
+		AA360A40216D452E008B6721 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		AA37373C216AA71800F3EB1E /* NewYorkTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewYorkTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA37373F216AA71800F3EB1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA373741216AA71800F3EB1E /* TopStoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		AA37375F216AA80600F3EB1E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AA360A40216D452E008B6721 /* Story.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				AA373742216AA71800F3EB1E /* TopStoriesViewController.swift in Sources */,
 				AA373740216AA71800F3EB1E /* AppDelegate.swift in Sources */,
 				AA373764216AAFC700F3EB1E /* StoryCell.swift in Sources */,
+				AA360A41216D452E008B6721 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,7 +544,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X5UG5NGMS;
 				INFOPLIST_FILE = NewYorkTimes/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.inovidea.NewYorkTimes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -556,7 +563,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X5UG5NGMS;
 				INFOPLIST_FILE = NewYorkTimes/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.inovidea.NewYorkTimes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -573,7 +583,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X5UG5NGMS;
 				INFOPLIST_FILE = NewYorkTimesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.inovidea.NewYorkTimesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -591,7 +605,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X5UG5NGMS;
 				INFOPLIST_FILE = NewYorkTimesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.inovidea.NewYorkTimesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

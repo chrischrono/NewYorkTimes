@@ -9,6 +9,8 @@
 import UIKit
 
 //New York Times API Key: 2e349727818b436f9806e608ceeec68a
+//http://api.nytimes.com/svc/topstories/v2/{section}.{response-format}?api-key={your-api-key}
+//http://api.nytimes.com/svc/topstories/v2/home.json?api-key=2e349727818b436f9806e608ceeec68a
 class TopStoriesViewController: UIViewController {
     @IBOutlet weak var topStoriesTableView: UITableView!
     
