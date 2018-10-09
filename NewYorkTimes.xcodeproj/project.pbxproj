@@ -19,6 +19,8 @@
 		AA360A59216D5000008B6721 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A4F216D5000008B6721 /* HTTPTask.swift */; };
 		AA360A5A216D5000008B6721 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A50216D5000008B6721 /* NetworkLogger.swift */; };
 		AA360A5B216D5000008B6721 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A51216D5000008B6721 /* Router.swift */; };
+		AA360A5D216D567D008B6721 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A5C216D567D008B6721 /* Dynamic.swift */; };
+		AA360A5F216D56C9008B6721 /* TopStoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A5E216D56C9008B6721 /* TopStoriesDataSource.swift */; };
 		AA373740216AA71800F3EB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37373F216AA71800F3EB1E /* AppDelegate.swift */; };
 		AA373742216AA71800F3EB1E /* TopStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA373741216AA71800F3EB1E /* TopStoriesViewController.swift */; };
 		AA373745216AA71800F3EB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA373743216AA71800F3EB1E /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		AA360A4F216D5000008B6721 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		AA360A50216D5000008B6721 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		AA360A51216D5000008B6721 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AA360A5C216D567D008B6721 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		AA360A5E216D56C9008B6721 /* TopStoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesDataSource.swift; sourceTree = "<group>"; };
 		AA37373C216AA71800F3EB1E /* NewYorkTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewYorkTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA37373F216AA71800F3EB1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA373741216AA71800F3EB1E /* TopStoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 		AA37375F216AA80600F3EB1E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AA360A5C216D567D008B6721 /* Dynamic.swift */,
 				AA360A40216D452E008B6721 /* Story.swift */,
 			);
 			path = Model;
@@ -212,6 +217,7 @@
 		AA373761216AA83800F3EB1E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AA360A5E216D56C9008B6721 /* TopStoriesDataSource.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -459,11 +465,13 @@
 				AA360A52216D5000008B6721 /* JSONParameterEncoder.swift in Sources */,
 				AA360A58216D5000008B6721 /* HTTPMethod.swift in Sources */,
 				AA360A5A216D5000008B6721 /* NetworkLogger.swift in Sources */,
+				AA360A5D216D567D008B6721 /* Dynamic.swift in Sources */,
 				AA373742216AA71800F3EB1E /* TopStoriesViewController.swift in Sources */,
 				AA373740216AA71800F3EB1E /* AppDelegate.swift in Sources */,
 				AA360A55216D5000008B6721 /* NewYorkTimesEndPoint.swift in Sources */,
 				AA373764216AAFC700F3EB1E /* StoryCell.swift in Sources */,
 				AA360A5B216D5000008B6721 /* Router.swift in Sources */,
+				AA360A5F216D56C9008B6721 /* TopStoriesDataSource.swift in Sources */,
 				AA360A41216D452E008B6721 /* Story.swift in Sources */,
 				AA360A57216D5000008B6721 /* EndPointType.swift in Sources */,
 				AA360A54216D5000008B6721 /* URLParameterEncoding.swift in Sources */,
