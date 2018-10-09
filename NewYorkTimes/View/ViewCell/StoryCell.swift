@@ -7,8 +7,29 @@
 //
 
 import UIKit
+import Kingfisher
 
 class StoryCell: UITableViewCell {
+    var thumbnailUrl: String? {
+        didSet {
+            if let thumbnailUrl = thumbnailUrl {
+                thumbnailImageView.kf.setImage(with: URL(string: thumbnailUrl))
+            } else {
+                thumbnailImageView.image = nil
+            }
+        }
+    }
+    var title: String? {
+        didSet {
+            titleLabel.text = title
+        }
+    }
+    var author: String? {
+        didSet {
+            authorLabel.text = author
+        }
+    }
+    
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
