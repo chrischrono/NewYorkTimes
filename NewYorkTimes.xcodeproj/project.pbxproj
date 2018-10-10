@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2AD933A5340EAE3C422FF8DB /* Pods_NewYorkTimes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB69F214DD4ECCF88C86E7DF /* Pods_NewYorkTimes.framework */; };
+		AA2428C4216E319E00A2DC77 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2428C3216E319E00A2DC77 /* Constants.swift */; };
 		AA360A41216D452E008B6721 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A40216D452E008B6721 /* Story.swift */; };
 		AA360A52216D5000008B6721 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A45216D5000008B6721 /* JSONParameterEncoder.swift */; };
 		AA360A53216D5000008B6721 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A46216D5000008B6721 /* ParameterEncoding.swift */; };
@@ -21,6 +22,7 @@
 		AA360A5B216D5000008B6721 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A51216D5000008B6721 /* Router.swift */; };
 		AA360A5D216D567D008B6721 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A5C216D567D008B6721 /* Dynamic.swift */; };
 		AA360A5F216D56C9008B6721 /* TopStoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A5E216D56C9008B6721 /* TopStoriesDataSource.swift */; };
+		AA360A61216D5A63008B6721 /* TopStoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A60216D5A63008B6721 /* TopStoriesViewModel.swift */; };
 		AA373740216AA71800F3EB1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA37373F216AA71800F3EB1E /* AppDelegate.swift */; };
 		AA373742216AA71800F3EB1E /* TopStoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA373741216AA71800F3EB1E /* TopStoriesViewController.swift */; };
 		AA373745216AA71800F3EB1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA373743216AA71800F3EB1E /* Main.storyboard */; };
@@ -45,6 +47,7 @@
 		115E2B218241B532B263BC2C /* Pods-NewYorkTimes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewYorkTimes.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewYorkTimes/Pods-NewYorkTimes.release.xcconfig"; sourceTree = "<group>"; };
 		4AE4B1F4DB64F16637BEEEFC /* Pods-NewYorkTimesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewYorkTimesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewYorkTimesTests/Pods-NewYorkTimesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9501026727F8368F84479709 /* Pods-NewYorkTimesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewYorkTimesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewYorkTimesTests/Pods-NewYorkTimesTests.release.xcconfig"; sourceTree = "<group>"; };
+		AA2428C3216E319E00A2DC77 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AA360A40216D452E008B6721 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		AA360A45216D5000008B6721 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
 		AA360A46216D5000008B6721 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		AA360A51216D5000008B6721 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AA360A5C216D567D008B6721 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		AA360A5E216D56C9008B6721 /* TopStoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesDataSource.swift; sourceTree = "<group>"; };
+		AA360A60216D5A63008B6721 /* TopStoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesViewModel.swift; sourceTree = "<group>"; };
 		AA37373C216AA71800F3EB1E /* NewYorkTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewYorkTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA37373F216AA71800F3EB1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA373741216AA71800F3EB1E /* TopStoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 			children = (
 				AA360A42216D4FD4008B6721 /* Service */,
 				AA37373F216AA71800F3EB1E /* AppDelegate.swift */,
+				AA2428C3216E319E00A2DC77 /* Constants.swift */,
 				AA373743216AA71800F3EB1E /* Main.storyboard */,
 				AA373746216AA72100F3EB1E /* Assets.xcassets */,
 				AA373748216AA72100F3EB1E /* LaunchScreen.storyboard */,
@@ -218,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				AA360A5E216D56C9008B6721 /* TopStoriesDataSource.swift */,
+				AA360A60216D5A63008B6721 /* TopStoriesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -475,6 +481,8 @@
 				AA360A41216D452E008B6721 /* Story.swift in Sources */,
 				AA360A57216D5000008B6721 /* EndPointType.swift in Sources */,
 				AA360A54216D5000008B6721 /* URLParameterEncoding.swift in Sources */,
+				AA360A61216D5A63008B6721 /* TopStoriesViewModel.swift in Sources */,
+				AA2428C4216E319E00A2DC77 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

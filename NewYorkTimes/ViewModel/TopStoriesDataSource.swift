@@ -12,11 +12,18 @@ import UIKit
 class TopStoriesDataSource: NSObject, UITableViewDataSource {
     /** hold the topStoryList */
     var topStories: Dynamic<[Story]> = Dynamic([])
+    var status: String?
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return topStories.value.count
+        return topStories.value.count > 0 ? topStories.value.count : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if topStories.value.count == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "infoCellIdentifier", for: indexPath)
+            cell.textLabel?.text = status ?? "No Story avaliable"
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "storyCellIdentifier", for: indexPath) as! StoryCell
         
         let story = topStories.value[indexPath.row]

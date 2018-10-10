@@ -33,7 +33,7 @@ extension NewYorkTimesApi: EndPointType {
     /** API path for specific request. */
     var path: String {
         switch self {
-        case .getTopStories(let section):
+        case .getTopStories(let section, _):
             return "topstories/v2/\(section).json"
         }
     }
