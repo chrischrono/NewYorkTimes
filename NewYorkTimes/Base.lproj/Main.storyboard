@@ -107,11 +107,86 @@
                     <navigationItem key="navigationItem" title="Top Stories" id="ujj-LW-eeQ"/>
                     <connections>
                         <outlet property="topStoriesTableView" destination="m9c-OX-4nF" id="9qX-Qf-X5n"/>
+                        <segue destination="gsK-63-PBE" kind="show" identifier="storyDetailSegue" id="1Gq-y5-rsM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="607" y="27"/>
+        </scene>
+        <!--Story Detail-->
+        <scene sceneID="mxw-tW-QY8">
+            <objects>
+                <viewController title="Story Detail" id="gsK-63-PBE" customClass="StoryDetailViewController" customModule="NewYorkTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MoG-bt-ES7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KR-br-hvE">
+                                <rect key="frame" x="15" y="74" width="345" height="36"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FOM-pa-c46">
+                                <rect key="frame" x="0.0" y="115" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="YOh-t9-to9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9R-0S-Fp3">
+                                <rect key="frame" x="15" y="248" width="345" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ya-aC-yBx">
+                                <rect key="frame" x="15" y="273.5" width="345" height="14.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1z-IK-4lR">
+                                <rect key="frame" x="15" y="293" width="345" height="30"/>
+                                <state key="normal" title="See More"/>
+                                <connections>
+                                    <action selector="seeMoreButtonDidTapped:" destination="gsK-63-PBE" eventType="touchUpInside" id="PAn-dP-5Cj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7KR-br-hvE" firstAttribute="top" secondItem="a0Z-jy-cat" secondAttribute="top" constant="10" id="3M2-or-e4B"/>
+                            <constraint firstItem="FOM-pa-c46" firstAttribute="centerX" secondItem="a0Z-jy-cat" secondAttribute="centerX" id="5uV-ub-WWm"/>
+                            <constraint firstItem="4Ya-aC-yBx" firstAttribute="width" secondItem="7KR-br-hvE" secondAttribute="width" id="BVg-f0-rkf"/>
+                            <constraint firstItem="FOM-pa-c46" firstAttribute="top" secondItem="7KR-br-hvE" secondAttribute="bottom" constant="5" id="P6n-9a-tTN"/>
+                            <constraint firstItem="R1z-IK-4lR" firstAttribute="width" secondItem="7KR-br-hvE" secondAttribute="width" id="QyR-nS-I3V"/>
+                            <constraint firstItem="4Ya-aC-yBx" firstAttribute="top" secondItem="u9R-0S-Fp3" secondAttribute="bottom" constant="5" id="RYI-BD-2Jv"/>
+                            <constraint firstItem="R1z-IK-4lR" firstAttribute="top" secondItem="4Ya-aC-yBx" secondAttribute="bottom" constant="5" id="Umm-l3-kBh"/>
+                            <constraint firstItem="u9R-0S-Fp3" firstAttribute="top" secondItem="FOM-pa-c46" secondAttribute="bottom" constant="5" id="djw-D1-Eys"/>
+                            <constraint firstItem="R1z-IK-4lR" firstAttribute="centerX" secondItem="a0Z-jy-cat" secondAttribute="centerX" id="fK7-WB-Go0"/>
+                            <constraint firstItem="4Ya-aC-yBx" firstAttribute="centerX" secondItem="a0Z-jy-cat" secondAttribute="centerX" id="fUA-CB-igb"/>
+                            <constraint firstItem="7KR-br-hvE" firstAttribute="width" secondItem="MoG-bt-ES7" secondAttribute="width" constant="-30" id="gBk-qj-YQ4"/>
+                            <constraint firstItem="7KR-br-hvE" firstAttribute="centerX" secondItem="a0Z-jy-cat" secondAttribute="centerX" id="gGM-Mg-pcx"/>
+                            <constraint firstItem="FOM-pa-c46" firstAttribute="width" secondItem="MoG-bt-ES7" secondAttribute="width" id="gUk-wY-0b6"/>
+                            <constraint firstItem="u9R-0S-Fp3" firstAttribute="width" secondItem="7KR-br-hvE" secondAttribute="width" id="gwX-Tq-jQK"/>
+                            <constraint firstItem="u9R-0S-Fp3" firstAttribute="centerX" secondItem="a0Z-jy-cat" secondAttribute="centerX" id="pen-Xo-n4C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a0Z-jy-cat"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="4Ya-aC-yBx" id="weu-Qv-Duq"/>
+                        <outlet property="descriptionLabel" destination="u9R-0S-Fp3" id="7ge-Sw-W3t"/>
+                        <outlet property="seeMoreButton" destination="R1z-IK-4lR" id="QTP-we-w5h"/>
+                        <outlet property="storyImageView" destination="FOM-pa-c46" id="0Ko-Jg-bYa"/>
+                        <outlet property="storyImageViewHeightContraint" destination="YOh-t9-to9" id="cH6-4J-8VW"/>
+                        <outlet property="titleLabel" destination="7KR-br-hvE" id="HGC-EK-Tl9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Pw-hV-egx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1361" y="27"/>
         </scene>
     </scenes>
 </document>
