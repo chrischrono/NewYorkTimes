@@ -32,7 +32,7 @@ class NetworkManager {
      - Parameter apiKey: API key to request topStories.
      - Parameter completion: block to handle the fetch results
      */
-    func getTopStories(section: String, apiKey: String, completion: @escaping (_ pictures: [Story]?,_ error: String?)->()) {
+    func getTopStories(section: String, apiKey: String, completion: @escaping (_ stories: [Story]?,_ error: String?)->()) {
         router.request(.getTopStories(section: section, apiKey: apiKey)) { data, response, error in
             let result = self.handleNetworkResponse(data: data, response: response, error: error)
             switch result{

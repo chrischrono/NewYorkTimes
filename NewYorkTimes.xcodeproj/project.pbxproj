@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2AD933A5340EAE3C422FF8DB /* Pods_NewYorkTimes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB69F214DD4ECCF88C86E7DF /* Pods_NewYorkTimes.framework */; };
+		AA1326C5216FF5AB00913AEF /* TopStoriesDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1326C4216FF5AB00913AEF /* TopStoriesDataSourceTests.swift */; };
+		AA1326C9216FF65500913AEF /* topStories.json in Resources */ = {isa = PBXBuildFile; fileRef = AA1326C8216FF65500913AEF /* topStories.json */; };
+		AA1326CD216FF99A00913AEF /* TopStoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1326CC216FF99A00913AEF /* TopStoriesViewModelTests.swift */; };
+		AA1326D0216FFF1500913AEF /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1326CF216FFF1500913AEF /* XCTestCase.swift */; };
+		AA1326D2216FFFFA00913AEF /* StoryDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1326D1216FFFFA00913AEF /* StoryDetailViewModelTest.swift */; };
 		AA2428C4216E319E00A2DC77 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2428C3216E319E00A2DC77 /* Constants.swift */; };
 		AA360A41216D452E008B6721 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A40216D452E008B6721 /* Story.swift */; };
 		AA360A52216D5000008B6721 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA360A45216D5000008B6721 /* JSONParameterEncoder.swift */; };
@@ -49,6 +54,11 @@
 		115E2B218241B532B263BC2C /* Pods-NewYorkTimes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewYorkTimes.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewYorkTimes/Pods-NewYorkTimes.release.xcconfig"; sourceTree = "<group>"; };
 		4AE4B1F4DB64F16637BEEEFC /* Pods-NewYorkTimesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewYorkTimesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewYorkTimesTests/Pods-NewYorkTimesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9501026727F8368F84479709 /* Pods-NewYorkTimesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewYorkTimesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewYorkTimesTests/Pods-NewYorkTimesTests.release.xcconfig"; sourceTree = "<group>"; };
+		AA1326C4216FF5AB00913AEF /* TopStoriesDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesDataSourceTests.swift; sourceTree = "<group>"; };
+		AA1326C8216FF65500913AEF /* topStories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = topStories.json; sourceTree = "<group>"; };
+		AA1326CC216FF99A00913AEF /* TopStoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesViewModelTests.swift; sourceTree = "<group>"; };
+		AA1326CF216FFF1500913AEF /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		AA1326D1216FFFFA00913AEF /* StoryDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewModelTest.swift; sourceTree = "<group>"; };
 		AA2428C3216E319E00A2DC77 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AA360A40216D452E008B6721 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		AA360A45216D5000008B6721 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
@@ -102,6 +112,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA1326C7216FF63800913AEF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AA1326C8216FF65500913AEF /* topStories.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		AA1326CE216FFEF800913AEF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AA1326CF216FFF1500913AEF /* XCTestCase.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		AA360A42216D4FD4008B6721 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,8 +225,13 @@
 		AA373753216AA72100F3EB1E /* NewYorkTimesTests */ = {
 			isa = PBXGroup;
 			children = (
+				AA1326CE216FFEF800913AEF /* Extension */,
+				AA1326C7216FF63800913AEF /* Resource */,
 				AA373754216AA72100F3EB1E /* NewYorkTimesTests.swift */,
 				AA373756216AA72200F3EB1E /* Info.plist */,
+				AA1326C4216FF5AB00913AEF /* TopStoriesDataSourceTests.swift */,
+				AA1326CC216FF99A00913AEF /* TopStoriesViewModelTests.swift */,
+				AA1326D1216FFFFA00913AEF /* StoryDetailViewModelTest.swift */,
 			);
 			path = NewYorkTimesTests;
 			sourceTree = "<group>";
@@ -359,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA1326C9216FF65500913AEF /* topStories.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +530,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA1326D0216FFF1500913AEF /* XCTestCase.swift in Sources */,
+				AA1326CD216FF99A00913AEF /* TopStoriesViewModelTests.swift in Sources */,
+				AA1326C5216FF5AB00913AEF /* TopStoriesDataSourceTests.swift in Sources */,
+				AA1326D2216FFFFA00913AEF /* StoryDetailViewModelTest.swift in Sources */,
 				AA373755216AA72100F3EB1E /* NewYorkTimesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -58,7 +58,6 @@ extension StoryDetailViewController {
             if let imageUrl = imageUrl {
                 self.storyImageView.kf.setImage(with: URL(string: imageUrl))
             } else {
-                //self.storyImageViewWidthContraint.constant = 0
                 self.storyImageView.removeFromSuperview()
             }
             self.descriptionLabel.text = description
