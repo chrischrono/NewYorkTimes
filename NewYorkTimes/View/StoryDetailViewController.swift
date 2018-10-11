@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import SafariServices
 
 class StoryDetailViewController: UIViewController {
     @IBOutlet weak var storyImageView: UIImageView!
@@ -31,8 +32,16 @@ class StoryDetailViewController: UIViewController {
     }
     
     @IBAction func seeMoreButtonDidTapped(_ sender: Any) {
-        let url = storyDetailViewModel.getSeeMoreLink()
-        print(url)
+        let seeMoreUrl = storyDetailViewModel.getSeeMoreLink()
+        
+        if let url = URL(string: seeMoreUrl) {
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+            
+            let vc = SFSafariViewController(url: url, configuration: config)
+            present(vc, animated: true)
+        }
+        
     }
     
 }
