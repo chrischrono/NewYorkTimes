@@ -31,15 +31,16 @@ class TopStoriesViewController: UIViewController {
         }
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let storyDetailViewController = segue.destination as? StoryDetailViewController, let indexPath = sender as? IndexPath {
+            storyDetailViewController.storyDetailViewModel = topStoriesViewModel.getStoryDetailViewModel(for: indexPath)
+        }
+    }
+    
+    
+    
 
 }
 
@@ -65,6 +66,10 @@ extension TopStoriesViewController: UITableViewDelegate {
         DispatchQueue.main.async {
             self.topStoriesTableView.reloadData()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "storyDetailSegue", sender: indexPath)
     }
     
 }

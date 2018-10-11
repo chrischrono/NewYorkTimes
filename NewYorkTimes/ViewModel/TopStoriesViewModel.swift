@@ -48,4 +48,13 @@ extension TopStoriesViewModel {
             self.topStoriesDataSource?.topStories.value = stories!
         }
     }
+    
+    func getStoryDetailViewModel(for indexPath:IndexPath) -> StoryDetailViewModel?{
+        if let dataSource = topStoriesDataSource, dataSource.topStories.value.count > 0 {
+            let storyDetailViewModel = StoryDetailViewModel(with: dataSource.topStories.value[indexPath.row])
+            return storyDetailViewModel
+        }
+        
+        return nil
+    }
 }

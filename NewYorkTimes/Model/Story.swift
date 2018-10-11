@@ -26,7 +26,7 @@ struct Story: Codable {
     let section: String
     let subsection: String
     let title: String
-    let abstract: String
+    let description: String
     let author: String
     let url: String
     let multimedia: [Media]
@@ -35,7 +35,7 @@ struct Story: Codable {
         case section
         case subsection
         case title
-        case abstract
+        case description = "abstract"
         case author = "byline"
         case url
         case multimedia
@@ -45,4 +45,6 @@ struct Story: Codable {
 struct Media: Codable {
     let url: String
     let format: String
+    let width: Int
+    let height: Int
 }
