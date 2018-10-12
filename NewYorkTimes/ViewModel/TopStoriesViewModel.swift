@@ -11,10 +11,13 @@ import UIKit
 class TopStoriesViewModel: NSObject {
     /** hold the topStoryList */
     weak var topStoriesDataSource: TopStoriesDataSource?
+    /** hold the topStories's section */
     var section = ""
     
+    /** hold the network manager for New York Times's API */
     lazy var networkManager = NetworkManager()
     
+    /** closure to reload TopStoriesTableView */
     var reloadTopStoriesTableViewClosure: (()->())?
     
     /**
@@ -49,6 +52,10 @@ extension TopStoriesViewModel {
         }
     }
     
+    /**
+     Generate StoryDetailViewModel for selected indexPath
+     - Parameter indexPath: selected indexPath of top stories.
+     */
     func getStoryDetailViewModel(for indexPath:IndexPath) -> StoryDetailViewModel?{
         if let dataSource = topStoriesDataSource, dataSource.topStories.value.count > 0 {
             let storyDetailViewModel = StoryDetailViewModel(with: dataSource.topStories.value[indexPath.row])

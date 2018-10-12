@@ -13,9 +13,12 @@ import UIKit
 //http://api.nytimes.com/svc/topstories/v2/home.json?api-key=2e349727818b436f9806e608ceeec68a
 class TopStoriesViewController: UIViewController {
     
+    /** to show all Top Stories returned by the API  */
     @IBOutlet weak var topStoriesTableView: UITableView!
     
+    /** handle the data source for topStoriesTableView */
     var topStoriesDataSource = TopStoriesDataSource()
+    /** view model that handle the Top Stories retrieving process */
     var topStoriesViewModel: TopStoriesViewModel!
     
     override func viewDidLoad() {
@@ -61,7 +64,11 @@ extension TopStoriesViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension TopStoriesViewController: UITableViewDelegate {
+    /**
+     Reload data for topStoriesTableView
+     */
     func reloadTopStoriesTableView() {
         DispatchQueue.main.async {
             self.topStoriesTableView.reloadData()

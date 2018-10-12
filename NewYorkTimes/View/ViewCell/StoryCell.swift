@@ -10,6 +10,7 @@ import UIKit
 import Kingfisher
 
 class StoryCell: UITableViewCell {
+    /** hold Story's thumbnail url and upon setting will load the thumbnailImageView */
     var thumbnailUrl: String? {
         didSet {
             if let thumbnailUrl = thumbnailUrl {
@@ -19,19 +20,25 @@ class StoryCell: UITableViewCell {
             }
         }
     }
+    /** hold title and upon setting will set the titleLabel */
     var title: String? {
         didSet {
             titleLabel.text = title
         }
     }
+    
+    /** hold author and upon setting will set the authorLabel */
     var author: String? {
         didSet {
             authorLabel.text = author
         }
     }
     
+    /** to show Story's thumbnail image */
     @IBOutlet weak var thumbnailImageView: UIImageView!
+    /** to show Story's title image */
     @IBOutlet weak var titleLabel: UILabel!
+    /** to show Story's author image */
     @IBOutlet weak var authorLabel: UILabel!
     
     override func awakeFromNib() {

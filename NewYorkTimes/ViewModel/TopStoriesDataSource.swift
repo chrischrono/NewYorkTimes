@@ -12,6 +12,7 @@ import UIKit
 class TopStoriesDataSource: NSObject, UITableViewDataSource {
     /** hold the topStoryList */
     var topStories: Dynamic<[Story]> = Dynamic([])
+    /** hold the data retrieving status */
     var status: String?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

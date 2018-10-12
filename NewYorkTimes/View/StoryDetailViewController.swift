@@ -11,12 +11,18 @@ import Kingfisher
 import SafariServices
 
 class StoryDetailViewController: UIViewController {
+    /** to show Story's Image  */
     @IBOutlet weak var storyImageView: UIImageView!
+    /** to show Story's title  */
     @IBOutlet weak var titleLabel: UILabel!
+    /** to show Story's author  */
     @IBOutlet weak var authorLabel: UILabel!
+    /** to show Story's description  */
     @IBOutlet weak var descriptionLabel: UILabel!
+    /** button to show Story's complete news  */
     @IBOutlet weak var seeMoreButton: UIButton!
     
+    /** View Model that handle Story's data  */
     var storyDetailViewModel: StoryDetailViewModel!
     
     override func viewDidLoad() {
@@ -31,6 +37,9 @@ class StoryDetailViewController: UIViewController {
         storyDetailViewModel.loadStory()
     }
     
+    /**
+     Action for See More's button tapped, that is to load the complete news
+     */
     @IBAction func seeMoreButtonDidTapped(_ sender: Any) {
         let seeMoreUrl = storyDetailViewModel.getSeeMoreLink()
         

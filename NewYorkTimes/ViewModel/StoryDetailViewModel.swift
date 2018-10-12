@@ -9,9 +9,15 @@
 import UIKit
 
 class StoryDetailViewModel: NSObject {
+    /** hold the Story's data */
     var story: Story
+    /** Closure to set the Story's Detail */
     var setStoryDetailClosure: ((String,String,String?,String,String)->())?
     
+    /**
+     Initialize view model with Story's data
+     - Parameter story: Story's detailed data.
+     */
     init(with story: Story) {
         self.story = story
     }
@@ -19,6 +25,9 @@ class StoryDetailViewModel: NSObject {
 }
 
 extension StoryDetailViewModel {
+    /**
+     Prepare Story's data to load the setStoryDetailClosure
+     */
     func loadStory() {
         let media = story.multimedia.filter { $0.format == "mediumThreeByTwo210" }
         var imageUrl: String?
@@ -34,6 +43,9 @@ extension StoryDetailViewModel {
                                story.author)
     }
     
+    /**
+     Get complete Story's url
+     */
     func getSeeMoreLink() -> String {
         return story.url
     }

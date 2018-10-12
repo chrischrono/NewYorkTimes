@@ -27,7 +27,7 @@ class NetworkManager {
     let router = Router<NewYorkTimesApi>()
     
     /**
-     Fetched picture data based on Flickr Picture search API and keyword
+     Fetched Top Stories data based on New York Times Top Story API and Section
      - Parameter section: specific section for requested topStories.
      - Parameter apiKey: API key to request topStories.
      - Parameter completion: block to handle the fetch results

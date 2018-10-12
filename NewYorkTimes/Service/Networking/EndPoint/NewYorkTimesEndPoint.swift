@@ -42,7 +42,7 @@ extension NewYorkTimesApi: EndPointType {
         return .get
     }
     
-    /** generate task based on requested Picture's API. */
+    /** generate task based on requested New York Times's API. */
     var task: HTTPTask {
         switch self {
         case .getTopStories(_, let apiKey):
