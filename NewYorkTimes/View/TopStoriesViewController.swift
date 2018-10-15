@@ -42,8 +42,6 @@ class TopStoriesViewController: UIViewController {
         }
     }
     
-    
-    
 
 }
 
