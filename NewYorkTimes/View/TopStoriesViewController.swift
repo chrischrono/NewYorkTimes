@@ -14,7 +14,7 @@ import UIKit
 class TopStoriesViewController: UIViewController {
     
     /** to show all Top Stories returned by the API  */
-    @IBOutlet weak var topStoriesTableView: UITableView!
+    @IBOutlet private weak var topStoriesTableView: UITableView!
     
     /** handle the data source for topStoriesTableView */
     var topStoriesDataSource = TopStoriesDataSource()

@@ -15,7 +15,7 @@ class TopStoriesViewModel: NSObject {
     var section = ""
     
     /** hold the network manager for New York Times's API */
-    lazy var networkManager = NetworkManager()
+    lazy var networkManager: NewsNetworkManager = NetworkManager(environment: .production)
     
     /** closure to reload TopStoriesTableView */
     var reloadTopStoriesTableViewClosure: (()->())?

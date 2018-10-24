@@ -12,15 +12,15 @@ import SafariServices
 
 class StoryDetailViewController: UIViewController {
     /** to show Story's Image  */
-    @IBOutlet weak var storyImageView: UIImageView!
+    @IBOutlet private weak var storyImageView: UIImageView!
     /** to show Story's title  */
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
     /** to show Story's author  */
-    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet private weak var authorLabel: UILabel!
     /** to show Story's description  */
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
     /** button to show Story's complete news  */
-    @IBOutlet weak var seeMoreButton: UIButton!
+    @IBOutlet private weak var seeMoreButton: UIButton!
     
     /** View Model that handle Story's data  */
     var storyDetailViewModel: StoryDetailViewModel!

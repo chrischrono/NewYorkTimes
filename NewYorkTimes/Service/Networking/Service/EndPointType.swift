@@ -6,6 +6,12 @@
 
 import Foundation
 
+enum NetworkEnvironment {
+    case qa
+    case production
+    case staging
+}
+
 protocol EndPointType {
     var baseURL: URL { get }
     var path: String { get }

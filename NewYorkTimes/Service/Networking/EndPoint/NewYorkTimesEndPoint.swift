@@ -6,13 +6,9 @@
 
 import Foundation
 
-enum NetworkEnvironment {
-    case production
-}
-
-public enum NewYorkTimes: Int{
+/*public enum NewYorkTimes: Int{
     case topStories
-}
+}*/
 
 public enum NewYorkTimesApi {
     case getTopStories(section: String, apiKey: String)
@@ -22,7 +18,10 @@ extension NewYorkTimesApi: EndPointType {
     /** API base urls. */
     var environmentBaseURL : String {
         switch NetworkManager.environment {
-        case .production: return "http://api.nytimes.com/svc/"
+        case .production:
+            return "http://api.nytimes.com/svc/"
+        default:
+            return "http://api.nytimes.com/svc/"
         }
     }
     

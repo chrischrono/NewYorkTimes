@@ -10,18 +10,22 @@ import XCTest
 @testable import NewYorkTimes
 
 class TopStoriesViewModelTests: XCTestCase {
-    class MockNetworkManager: NetworkManager {
+    class MockNetworkManager: NewsNetworkManager {
         var mockTopStories: [Story]?
         var mockError: String?
         
-        override func getTopStories(section: String, apiKey: String, completion: @escaping (_ stories: [Story]?,_ error: String?)->()) {
+        required init(environment: NetworkEnvironment) {
+            print("Test environment: \(environment)")
+        }
+        
+        func getTopStories(section: String, apiKey: String, completion: @escaping (_ stories: [Story]?,_ error: String?)->()) {
             completion( mockTopStories, mockError)
         }
     }
     
     var topStoriesDataSource = TopStoriesDataSource()
     var topStoriesViewModel: TopStoriesViewModel!
-    var networkManager = MockNetworkManager()
+    var networkManager = MockNetworkManager(environment: .qa)
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

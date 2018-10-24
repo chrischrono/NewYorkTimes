@@ -22,9 +22,24 @@ enum Result<String>{
     case failure(String)
 }
 
-class NetworkManager {
+protocol NewsNetworkManager {
+    init(environment: NetworkEnvironment)
+    /**
+     Fetched Top Stories data based on New York Times Top Story API and Section
+     - Parameter section: specific section for requested topStories.
+     - Parameter apiKey: API key to request topStories.
+     - Parameter completion: block to handle the fetch results
+     */
+    func getTopStories(section: String, apiKey: String, completion: @escaping (_ stories: [Story]?,_ error: String?)->())
+}
+
+class NetworkManager: NewsNetworkManager {
     static var environment : NetworkEnvironment = .production
     let router = Router<NewYorkTimesApi>()
+    
+    required init(environment: NetworkEnvironment) {
+        NetworkManager.environment = environment
+    }
     
     /**
      Fetched Top Stories data based on New York Times Top Story API and Section

@@ -35,11 +35,11 @@ class StoryCell: UITableViewCell {
     }
     
     /** to show Story's thumbnail image */
-    @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet private weak var thumbnailImageView: UIImageView!
     /** to show Story's title image */
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
     /** to show Story's author image */
-    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet private weak var authorLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
