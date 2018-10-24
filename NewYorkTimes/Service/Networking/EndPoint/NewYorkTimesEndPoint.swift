@@ -1,5 +1,5 @@
 //
-//  MovieEndPoint.swift
+//  NewYorkTimesEndPoint.swift
 //  NetworkLayer
 //
 //
