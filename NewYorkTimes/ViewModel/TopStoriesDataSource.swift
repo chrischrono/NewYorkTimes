@@ -11,7 +11,7 @@ import UIKit
 /** Class that hold topStoryList and also handle the UITableViewDataSource */
 class TopStoriesDataSource: NSObject, UITableViewDataSource {
     /** hold the topStoryList */
-    var topStories: Dynamic<[Story]> = Dynamic([])
+    let topStories: Dynamic<[Story]> = Dynamic([])
     /** hold the data retrieving status */
     var status: String?
     

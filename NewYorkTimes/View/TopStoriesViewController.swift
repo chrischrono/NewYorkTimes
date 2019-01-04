@@ -17,7 +17,7 @@ class TopStoriesViewController: UIViewController {
     @IBOutlet private weak var topStoriesTableView: UITableView!
     
     /** handle the data source for topStoriesTableView */
-    var topStoriesDataSource = TopStoriesDataSource()
+    let topStoriesDataSource = TopStoriesDataSource()
     /** view model that handle the Top Stories retrieving process */
     var topStoriesViewModel: TopStoriesViewModel!
     
